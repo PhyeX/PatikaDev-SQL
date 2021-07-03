@@ -31,5 +31,5 @@ SELECT * From film Where title LIKE 'C%' AND length > 90 AND rental_rate = 2.99 
 
 
 # NOTLAR
-### ~~ = LIKE ~~ * = ILIKE !~~ = NOT LIKE !~~ * = NOT LIKE
+### ~~ = LIKE ,  ~~ * = ILIKE , !~~ = NOT LIKE ,  !~~ * = NOT LIKE
 
