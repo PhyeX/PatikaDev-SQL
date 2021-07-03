@@ -1,4 +1,4 @@
-# PatikaDev-SQL
+# PatikaDev-PostgreSQL
 ## Ödev 1
 #### Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
 SELECT title,description FROM film;
@@ -19,6 +19,12 @@ SELECT first_name,last_name FROM Actor WHERE first_name IN('Penelope','Nick','Ed
 
 #### Film tablosunda bulunan tüm sütunlardaki verileri rental_rate 0.99, 2.99, 4.99 VE replacement_cost 12.99, 15.99, 28.99 olma koşullarıyla sıralayınız.(IN operatörünü kullanınız.)
 SELECT * FROM film WHERE rental_rate IN(0.99,2,99,4,99) AND replacement_cost IN(12,99,15,99,28,99);
-
+## Ödev 3
+#### Country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
+SELECT country From Country WHERE country like 'A%a';
+#### Country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
+SELECT country From Country WHERE LENGTH(country) > 6 AND country like '%n';
+#### Film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren
+SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
 
 
