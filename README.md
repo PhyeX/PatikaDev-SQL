@@ -1,5 +1,18 @@
 # PatikaDev-PostgreSQL
-## Ödev 1
+
+<a href='#Ödev 1'>Ödev 1</a><br>
+<a href='#Ödev 2'>Ödev 2</a><br>
+<a href='#Ödev 3'>Ödev 3</a><br>
+<a href='#Ödev 4'>Ödev 4</a><br>
+<a href='#Ödev 5'>Ödev 5</a><br>
+<a href='#Ödev 6'>Ödev 6</a><br>
+<a href='#Ödev 7'>Ödev 7</a><br>
+<a href='#psql'>PSQL ve Uygulama I</a><br>
+<a href='#Notlar'>Notlar </a><br>
+ 
+ 
+ 
+## <p id = 'Ödev 1' > Ödev 1 </p> 
 #### Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
 ~~~sql
 SELECT title,description FROM film;
@@ -21,7 +34,7 @@ Cevap : Smith
 ~~~sql
 SELECT * FROM film WHERE  length < 50 AND  NOT rental_RATE = 2.99 OR NOT rental_rate = 4.99
 ~~~
-## Ödev 2
+## <p id = 'Ödev 2' > Ödev 2 </p> 
 #### Film tablosunda bulunan tüm sütunlardaki verileri replacement cost değeri 12.99 dan büyük eşit ve 16.99 küçük olma koşuluyla sıralayınız ( BETWEEN - AND yapısını kullanınız.)
 ~~~sql
 SELECT * FROM film WHERE BETWEEN 12.99 AND 16.99
@@ -34,7 +47,7 @@ SELECT first_name,last_name FROM Actor WHERE first_name IN('Penelope','Nick','Ed
 ~~~sql
 SELECT * FROM film WHERE rental_rate IN(0.99,2,99,4,99) AND replacement_cost IN(12.99,15.99,28.99);
 ~~~
-## Ödev 3
+## <p id = 'Ödev 3' > Ödev 3 </p> 
 #### Country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
 ~~~sql
 SELECT country From Country WHERE country like 'A%a';
@@ -52,7 +65,7 @@ SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
 SELECT * From film Where title LIKE 'C%' AND length > 90 AND rental_rate = 2.99 ; 
 ~~~
 
-## Ödev 4
+## <p id = 'Ödev 4' > Ödev 4 </p> 
 #### Film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
 ~~~sql
 SELECT DISTINCT replacement_cost FROM film; 
@@ -74,8 +87,8 @@ SELECT COUNT(*) FROM film WHERE LENGTH(country) = 5;
 SELECT COUNT(*) FROM City WHERE ILIKE city = '%R';
 ~~~
 
-## Ödev 5
 
+## <p id = 'Ödev 5' > Ödev 5 </p> 
 #### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
 ~~~sql
 SELECT title FROM film WHERE title LIKE '%n' LIMIT 5;
@@ -89,7 +102,7 @@ SELECT title FROM film WHERE title LIKE '%n' OFFSET 5 LIMIT 5;
 SELECT last_name FROM customer WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
 ~~~
 
-## Ödev 6
+## ## <p id = 'Ödev 6' > Ödev 6 </p> 
 #### Film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
 ~~~sql
 SELECT AVG(rental_rate) FROM film;
@@ -106,7 +119,7 @@ SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
 ~~~sql
 SELECT COUNT( DISTINCT replacement_cost )FROM film WHERE length > 150;
 ~~~
-## Ödev 7
+## <p id = 'Ödev 7' > Ödev 7 </p> 
 #### Film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
 ~~~sql
 SELECT rating FROM film GROUP BY rating;
@@ -125,8 +138,7 @@ SELECT country_id,COUNT(*) FROM city GROUP BY country_id ORDER BY COUNT(*) DESC 
 ~~~
 
 
-
-# PSQL ve Uygulama I
+# <p id = 'psql1' > PSQL ve Uygulama I </p> 
 ## PSQL
 ### PSQL, PostgreSQL ile birlikte gelen terminal tabanlı bir kullanıcı arayüzüdür. PSQL sayesinde komut satırında sorgular yazıp, sonuçlarını görebiliriz. Aşağıda temel PSQL komutlarının ilk bölümünü bulabilirsiniz.
 
@@ -174,7 +186,7 @@ WHERE (length BETWEEN 80 AND 120) AND (rental_rate IN (0.99, 2.99));
 ~~~
 
 
-# NOTLAR
+# <p id = 'Notlar' > NOTLAR </p> 
 ~~~sql
  ~~ = LIKE ,  ~~* = ILIKE , !~~ = NOT LIKE ,  !~~* = NOT LIKE
 ~~~
