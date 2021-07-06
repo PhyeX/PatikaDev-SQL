@@ -102,7 +102,7 @@ SELECT title FROM film WHERE title LIKE '%n' OFFSET 5 LIMIT 5;
 SELECT last_name FROM customer WHERE store_id = 1 ORDER BY last_name DESC LIMIT 4;
 ~~~
 
-## ## <p id = 'Ödev 6' > Ödev 6 </p> 
+## <p id = 'Ödev 6' > Ödev 6 </p> 
 #### Film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
 ~~~sql
 SELECT AVG(rental_rate) FROM film;
@@ -136,6 +136,7 @@ SELECT store_id,COUNT(*) FROM customer GROUP BY store_id;
 ~~~sql
 SELECT country_id,COUNT(*) FROM city GROUP BY country_id ORDER BY COUNT(*) DESC LIMIT 1;
 ~~~
+
 
 
 # <p id = 'psql1' > PSQL ve Uygulama I </p> 
