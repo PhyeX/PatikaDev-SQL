@@ -205,8 +205,8 @@ insert into Employee (id, name, email, birthday) values (50, 'Shel', 'scrone1d@h
 ~~~sql
 UPDATE Employee SET name = 'Barbaros' WHERE id = 1;
 UPDATE Employee SET email = 'rtb.barbaros@gmail.com' WHERE name = 'Barbaros';
-UPDATE Employee SET birthday = '2021/05/29' WHERE email = 'rtb.barbaros@gmail.com';
-UPDATE Employee SET birthday = '2021/05/29',name = 'Revaha' WHERE email = 'rtb.barbaros@gmail.com';
+UPDATE Employee SET birthday = '2021/05/29' WHERE email = '123@gmail.com';
+UPDATE Employee SET birthday = '2021/05/29',name = 'Revaha' WHERE email = '123@gmail.com';
 UPDATE Employee SET name = 'Barbaros',birthday = '2021/05/29' WHERE id = 1;
 ~~~
 #### Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
