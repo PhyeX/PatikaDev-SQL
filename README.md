@@ -8,6 +8,7 @@
 <a href='#Ödev 6'>Ödev 6</a><br>
 <a href='#Ödev 7'>Ödev 7</a><br>
 <a href='#Ödev 8'>Ödev 8</a><br>
+<a href='#Ödev 9'>Ödev 9</a><br>
 <a href='#psql'>PSQL ve Uygulama </a><br>
 <a href='#Notlar'>Notlar </a><br>
  
@@ -217,7 +218,19 @@ DELETE FROM Employee WHERE birthday = '2021/05/29';
 DELETE FROM Employee WHERE name = 'Tayyip';
 DELETE FROM Employee WHERE id = '1';
 ~~~
-
+## <p id = 'Ödev 9' > Ödev 9 </p> 
+#### City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+~~~sql
+SELECT city,country FROM city ci JOIN country co ON (co.country_id = ci.country_id );
+~~~
+#### Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+~~~sql
+SELECT first_name,last_name,payment_id FROM customer c JOIN payment p ON ( p.customer_id = c.customer_id);
+~~~
+#### Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+~~~sql
+SELECT first_name,last_name,rental_id FROM customer c JOIN rental r ON( c.customer_id = r.customer_id );
+~~~
 
 # <p id = 'psql1' > PSQL ve Uygulama I </p> 
 ## PSQL
