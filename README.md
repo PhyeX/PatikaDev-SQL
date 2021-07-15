@@ -8,7 +8,7 @@
 <a href='#Ödev 6'>Ödev 6</a><br>
 <a href='#Ödev 7'>Ödev 7</a><br>
 <a href='#Ödev 8'>Ödev 8</a><br>
-<a href='#psql'>PSQL ve Uygulama I</a><br>
+<a href='#psql'>PSQL ve Uygulama </a><br>
 <a href='#Notlar'>Notlar </a><br>
  
  
@@ -251,6 +251,33 @@ postgres=#
 ~~~
 \q
 ~~~
+#### PSQL ile PostgreSQL'e host, port, kullanıcı adı ve veritabanı ismi ile bağlanmak için:
+~~~sql
+psql -h <host_name> -p <port_name> -U <kullanıcı_adı> <veritabanı_adı>
+~~~
+#### Yeni veritabanı oluşturmak için
+~~~sql
+CREATE DATABASE <veritabanı_adı>
+~~~
+#### Yeni tablo oluşturmak için
+~~~sql
+CREATE TABLE <tablo_adı> {
+  <sütun_adı> VERİ TİPİ (KISITLAMA)
+  <sütun_adı> VERİ TİPİ (KISITLAMA)
+  ...}
+ ~~~
+#### Tablo detaylarını görmek için
+~~~sql
+\d+ <tablo_adı>
+~~~
+#### Bir tablodaki sütun ismini değiştirmek için
+~~~sql
+ALTER TABLE <tablo_adı> RENAME COLUMN <sütun_adı> TO <yeni_sütun_adı>
+~~~
+#### Bir sütuna UNIQUE kısıtlaması eklemek için
+~~~sql
+ALTER TABLE <tablo_adı> ADD CONSTRAINT <kısıtlama_adı> UNIQUE <sütun_adı>
+~~~
 
 #### Örnek Sorgu Senaryoları
 #### Customer tablosunda bulunan first_name değeri ve last_name değeri 'A' karakteri ile başlayan verileri sıralayınız.
@@ -265,7 +292,6 @@ SELECT *
 FROM film
 WHERE (length BETWEEN 80 AND 120) AND (rental_rate IN (0.99, 2.99));
 ~~~
-
 
 # <p id = 'Notlar' > NOTLAR </p> 
 ~~~sql
