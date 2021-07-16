@@ -9,6 +9,7 @@
 <a href='#Ödev 7'>Ödev 7</a><br>
 <a href='#Ödev 8'>Ödev 8</a><br>
 <a href='#Ödev 9'>Ödev 9</a><br>
+<a href='#Ödev 10'>Ödev 10</a><br>
 <a href='#psql'>PSQL ve Uygulama </a><br>
 <a href='#Notlar'>Notlar </a><br>
  
@@ -231,6 +232,20 @@ SELECT first_name,last_name,payment_id FROM customer c JOIN payment p ON ( p.cus
 ~~~sql
 SELECT first_name,last_name,rental_id FROM customer c JOIN rental r ON( c.customer_id = r.customer_id );
 ~~~
+##  <p id = 'Ödev 10' > Ödev 10 </p> 
+#### City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+~~~sql
+SELECT city,country FROM city ci LEFT JOIN country co ON ( ci.country_id = co.country_id );
+~~~
+#### Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+~~~sql
+SELECT first_name,last_name,payment_id FROM customer c RIGHT JOIN payment p ON ( p.customer_id = c.customer_id);
+~~~
+#### Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+~~~sql
+SELECT first_name,last_name,rental_id FROM customer c FULL JOIN rental r ON( c.customer_id = r.customer_id );
+~~~
+
 
 # <p id = 'psql1' > PSQL ve Uygulama I </p> 
 ## PSQL
