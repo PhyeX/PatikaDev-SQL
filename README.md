@@ -10,6 +10,7 @@
 <a href='#Ödev 8'>Ödev 8</a><br>
 <a href='#Ödev 9'>Ödev 9</a><br>
 <a href='#Ödev 10'>Ödev 10</a><br>
+<a href='#Ödev 11'>Ödev 11</a><br>
 <a href='#psql'>PSQL ve Uygulama </a><br>
 <a href='#Notlar'>Notlar </a><br>
  
@@ -244,6 +245,42 @@ SELECT first_name,last_name,payment_id FROM customer c RIGHT JOIN payment p ON (
 #### Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
 ~~~sql
 SELECT first_name,last_name,rental_id FROM customer c FULL JOIN rental r ON( c.customer_id = r.customer_id );
+~~~
+
+##  <p id = 'Ödev 11' > Ödev 11 </p> 
+#### Actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+~~~sql
+( SELECT first_name FROM actor )
+UNION
+( SELECT first_name FROM customer )
+~~~
+#### Actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+~~~sql
+( SELECT first_name FROM actor )
+INTERSECT
+( SELECT first_name FROM customer )
+~~~
+#### Actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+~~~sql
+( SELECT first_name FROM actor )
+EXCEPT
+( SELECT first_name FROM customer )
+~~~
+#### İlk 3 sorguyu tekrar eden veriler için de yapalım.
+~~~sql
+( SELECT first_name FROM actor )
+UNION ALL
+( SELECT first_name FROM customer )
+~~~
+~~~sql
+( SELECT first_name FROM actor )
+INTERSECT ALL
+( SELECT first_name FROM customer )
+~~~
+~~~sql
+( SELECT first_name FROM actor )
+EXCEPT ALL
+( SELECT first_name FROM customer )
 ~~~
 
 
