@@ -96,11 +96,11 @@ SELECT COUNT(*) FROM City WHERE ILIKE city = '%R';
 ## <p id = 'Ödev 5' > Ödev 5 </p> 
 #### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
 ~~~sql
-SELECT title FROM film WHERE title LIKE '%n' LIMIT 5;
+SELECT title,length FROM film WHERE title LIKE '%n' ORDER BY length DESC LIMIT 5 ;
 ~~~
 #### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
 ~~~sql
-SELECT title FROM film WHERE title LIKE '%n' OFFSET 5 LIMIT 5;
+SELECT title FROM film WHERE title LIKE '%n' ORDER BY length OFFSET 5 LIMIT 5;
 ~~~
 #### Customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
 ~~~sql
