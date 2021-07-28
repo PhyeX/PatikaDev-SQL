@@ -391,4 +391,6 @@ WHERE (length BETWEEN 80 AND 120) AND (rental_rate IN (0.99, 2.99));
 ~~~sql
  ~~ = LIKE ,  ~~* = ILIKE , !~~ = NOT LIKE ,  !~~* = NOT LIKE
 ~~~
-
+~~~
+https://www.mockaroo.com ( Fake Data Üretmek için Ödev 8 )
+~~~
